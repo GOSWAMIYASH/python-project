@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Stored Data{% endblock %}
+
+{% block content %}
+<h2>Stored Data</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in submissions %}
+        <tr>
+            <td>{{ entry.name }}</td>
+            <td>{{ entry.email }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
